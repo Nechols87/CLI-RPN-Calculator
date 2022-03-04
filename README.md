@@ -21,16 +21,23 @@ Specifications
 
 ## Installation
 
+Install on your computer
+``` npm install```
+
 
 ## Technical Stack
 
+Written in Javascript with few dependencies. Imported readline and chalk for command line flexiblity and to add color. Used Jest to test the functionality and check for errors.
 
 ## Usage
 
-
+Execute with:
+```npm start```
 
 ## Development
 
+Test with:
+```npm test```
 
 ## Contributing
 
