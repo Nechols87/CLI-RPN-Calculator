@@ -29,60 +29,33 @@ const r1 = readline.createInterface({
 
 let inputNumbers = [];
 
-r1.question('What would you like to calculate? \n', (input) => {
-    if(input === 'q') r1.close();
-    else if (typeof input === 'string') {
-        input = input.split(/\s+/);
-        if(input.length === 1) {
-            if(inputNumbers.length < 3) {
-              inputNumbers.push(input)
-              console.log(input)
-
-              r1.on('line', (input) => {
-                if(input === '+' || input === '-' ||input === '*' ||input === '/'){
-                    inputNumbers.push(input)
-                    result = rpnCalculator(inputNumbers)
-                    console.log(result)
-                    inputNumbers.splice(0)
-                    inputNumbers = [result]
-                    console.log(inputNumbers)
-                } else {
-                    if(input === 'q') r1.close();
-                    else{
-                      inputNumbers.push(input)
-                      console.log(inputNumbers)
-                    }
-                }
-              })
-            }  
-        } else {
+r1.question('Would you like to use the calculator? y/n \n', (input) => {
+    if(input !== 'y') {
+        console.log('Come back anytime!') 
+        r1.close();
+    }    
+    else { 
+        r1.on('line', (input) => {
             if(input === 'q') r1.close();
-            result = rpnCalculator(input)
-            console.log(result)
-            inputNumbers = [result]
-            console.log(inputNumbers)
-            
-            r1.on('line', (input) => {
-                if(input[input.length - 1] === '+' || input[input.length - 1] === '-' ||input[input.length - 1] === '*' ||input[input.length - 1] === '/'){
-                    input = input.split(/\s+/);
-                    console.log(input)
-                    console.log(inputNumbers)
-                    inputNumbers.push(input)
-                    console.log(`test ${Array.isArray(inputNumbers)}`)
-                    result = rpnCalculator(inputNumbers)
-                    console.log(result)
-                    inputNumbers.splice(0)
-                    inputNumbers = [result]
-                    console.log(inputNumbers)
-                } else {
-                    if(input === 'q') r1.close();
-                    else{
-                      inputNumbers.push(input)
-                      console.log(inputNumbers)
+            if(input === 'clear'){
+                inputNumbers.splice(0)
+                console.log('cleared')
+            }
+            else {
+                input = input.split(/\s+/);
+                inputNumbers.push(...input)
+
+                if(inputNumbers.length > 2) {
+                    if(input[input.length - 1] === '+' || input[input.length - 1] === '-' ||input[input.length - 1] === '*' ||input[input.length - 1] === '/') {
+                       result = rpnCalculator(inputNumbers)
+                       console.log(result)
+                       inputNumbers.splice(0)
+                       inputNumbers = [result]
                     }
-                }
-              })
-        }
+                } 
+            }
+            
+        })
     }      
 });
 
