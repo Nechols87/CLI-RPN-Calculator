@@ -14,7 +14,7 @@ const r1 = readline.createInterface({
 let inputNumbers = [];
 
 //Asks if they want to use calculator.
-r1.question('Would you like to use the calculator? y/n \n', (input) => {
+r1.question(chalk.blue('Would you like to use the calculator? y/n \n'), (input) => {
     if(input !== 'y') {
         console.log(chalk.blue('Come back anytime!'))
         r1.close();

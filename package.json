@@ -13,7 +13,7 @@
     "url": "git+https://github.com/Nechols87/CLI-RPN-Calculator.git"
   },
   "author": "Nick Echols",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Nechols87/CLI-RPN-Calculator/issues"
   },
