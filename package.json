@@ -1,0 +1,24 @@
+{
+  "name": "cli-rpn-calculator",
+  "version": "1.0.0",
+  "description": "CLI RPN Calculator",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nechols87/CLI-RPN-Calculator.git"
+  },
+  "author": "Nick Echols",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nechols87/CLI-RPN-Calculator/issues"
+  },
+  "homepage": "https://github.com/Nechols87/CLI-RPN-Calculator#readme",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "commander": "^9.0.0"
+  }
+}
