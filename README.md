@@ -6,18 +6,21 @@ This is an attempt to solve the given imaginary problem.
 Context
 -----------------
 
-We're building this command-line calculator for people who are comfortable with UNIX-like CLI utilities.
-We are starting with the basic 4 operators now but will want to eventually implement other operators and
+I built a command-line calculator for people who are comfortable with UNIX-like CLI utilities.
+I've started with the basic 4 operators now but will want to eventually implement other operators and
 an alternate interface (such as WebSocket, file, or TCP socket).
-There's no need to implement these, but design with these future changes in mind.
+
 
 Specifications
 -----------------
 
-1. The calculator should use standard input and standard output
-2. It should implement the four standard arithmetic operators
-3. The calculator should handle errors and recover gracefully
-4. The calculator should exit when it receives a `q` command or an end of input indicator (EOF / Ctrl+D)
+The calculator should has standard input and standard output
+It implement the arithmetic operators '+', '-', '*', and '/'
+The calculator handles errors and recover gracefully
+The calculator should exit when it receives a `q` command or an end of input indicator (EOF / Ctrl+D)
+There is a password to access the calculator. The password is 'takehome'
+I used a recersive function to keep continuous functionality from the calculator until the person exits out. 
+If someone wants clear their current equation and start over they can enter 'clear' and it will provide a clean start
 
 ## Installation
 
@@ -27,7 +30,7 @@ Install on your computer
 
 ## Technical Stack
 
-Written in Javascript with few dependencies. Imported readline and chalk for command line flexiblity and to add color. Used Jest to test the functionality and check for errors.
+Written in Javascript with few dependencies. Imported readline and chalk for command line flexiblity and to add color. Used Jest to test the functionality and check for errors.  
 
 ## Usage
 

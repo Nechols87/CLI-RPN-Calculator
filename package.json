@@ -1,9 +1,10 @@
 {
-  "name": "cli-rpn-calculator",
+  "name": "cli-rpn",
   "version": "1.0.0",
   "description": "CLI RPN Calculator",
   "main": "index.js",
-  "bin": "index.js",
+  "preferGlobal": true,
+  "bin": "./index.js",
   "scripts": {
     "start": "node index.js",
     "test": "jest --config ./jest.config.json",
