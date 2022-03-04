@@ -18,7 +18,7 @@ let password = false;
 
 const recursiveAsyncReadLine = () => {
     if(password === false){
-        r1.question(chalk.green('What is the password\n'), (input) => {
+        r1.question(chalk.bgGreen('What is the password\n'), (input) => {
             if(input === 'takehome'){
                password = true;
                recursiveAsyncReadLine();
@@ -31,14 +31,14 @@ const recursiveAsyncReadLine = () => {
         })
     }
     //Asks if they want to use calculator.
-    r1.question(chalk.blue('Would you like to use the calculator? y/n \nWould you like the version? version\nWould you like a description of the calculator? description\n'), (input) => {
+    r1.question(chalk.bgBlue('Would you like to use the calculator? y/n \nWould you like the version? version\nWould you like a description of the calculator? description\n'), (input) => {
         if(input === 'q') r1.close();
         else if(input === 'version'){
             console.log(`v${version}`);
             recursiveAsyncReadLine(); //Calling this function again to ask new question
         }
         else if(input === 'description'){
-            console.log(`RPN stands for Reverse Polish Notation (Reverse Polish Notation) and has been developed in 1920 by Jan Lukasiewicz.\nRPN is a mathematical notation in which every operator follows all of its operands, in contrast to Polish notation, which puts the operator in the prefix position.\nIt is also known as postfix notation and is parenthesis-free as long as operator arities are fixed.\n1 + 2 = 3 === calculator('1 2 +')\n1 + 2 - 3 = 0 === calculator('1 2 + 3 -')\n(1 + 2) * 3 = 9 === calculator('1 2 + 3 *')`)
+            console.log(chalk.magenta(`RPN stands for Reverse Polish Notation (Reverse Polish Notation) and has been developed in 1920 by Jan Lukasiewicz.\nRPN is a mathematical notation in which every operator follows all of its operands,\nin contrast to Polish notation, which puts the operator in the prefix position.\nIt is also known as postfix notation and is parenthesis-free as long as operator arities are fixed.\n1 + 2 = 3 === calculator('1 2 +')\n1 + 2 - 3 = 0 === calculator('1 2 + 3 -')\n(1 + 2) * 3 = 9 === calculator('1 2 + 3 *')`))
             recursiveAsyncReadLine();
         }
         else if(input !== 'y') {

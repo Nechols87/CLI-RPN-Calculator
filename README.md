@@ -24,23 +24,34 @@ If someone wants clear their current equation and start over they can enter 'cle
 
 ## Installation
 
-Install on your computer
-``` npm install```
+```sh
+npm install
+```
 
+### Create Symlink
+
+```sh
+npm link or sudo npm link
+```
+
+### Usage
+
+Start CLI
+```sh
+cli-rpn or npm start
+```
 
 ## Technical Stack
 
 Written in Javascript with few dependencies. Imported readline and chalk for command line flexiblity and to add color. Used Jest to test the functionality and check for errors.  
 
-## Usage
-
-Execute with:
-```npm start```
 
 ## Development
 
 Test with:
-```npm test```
+```sh
+npm test
+```
 
 ## Contributing
 
