@@ -30,17 +30,23 @@ Install on your computer
 
 ## Technical Stack
 
-Written in Javascript with few dependencies. Imported readline and chalk for command line flexiblity and to add color. Used Jest to test the functionality and check for errors.  
+Written in Javascript with few dependencies. Imported readline and chalk for command line flexiblity and to add color. Used Jest to test the functionality and check for errors. Used Travis CI to automate building and testing code changes, providing immediate feedback on the success of the change. Containerized with Docker. If application has a complicated setup and installation process then Docker can be very helpful. There are often language-specific alternatives to this approach, but using Docker as a distribution mechanism can work for most anything you can install within a Linux container.
 
 ## Usage
 
 Execute with:
 ```npm start```
 
+Run in Docker:
+```
+docker run -it cli-rpn
+```
+
 ## Development
 
 Test with:
 ```npm test```
+
 
 ## Contributing
 

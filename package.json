@@ -4,11 +4,12 @@
   "description": "CLI RPN Calculator",
   "main": "index.js",
   "preferGlobal": true,
-  "bin": "./index.js",
+  "bin": {
+    "cli-rpn": "./index.js"
+  },
   "scripts": {
     "start": "node index.js",
-    "test": "jest --config ./jest.config.json",
-    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
+    "test": "jest --config ./jest.config.json"
   },
   "repository": {
     "type": "git",
