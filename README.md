@@ -27,6 +27,8 @@ If someone wants clear their current equation and start over they can enter 'cle
 Install on your computer
 ``` npm install```
 
+Install globally
+```npm link ```
 
 ## Technical Stack
 
@@ -35,7 +37,7 @@ Written in Javascript with few dependencies. Imported readline and chalk for com
 ## Usage
 
 Execute with:
-```npm start```
+```npm start or cli-rpn```
 
 Run in Docker:
 ```
