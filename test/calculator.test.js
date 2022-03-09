@@ -8,7 +8,7 @@ describe('calculate', function () {
 
     it('should return value returned by operator', function () {
         var result = calculate([1, 2, function () { return 'foo'; }]);
-        expect(result).toEqual('foo');
+        expect(result).toEqual(['foo']);
     });
 
 });
