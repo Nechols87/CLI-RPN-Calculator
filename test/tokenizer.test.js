@@ -1,4 +1,4 @@
-const tokenize = require('../lib/tolkenizer');
+const tokenize = require('../lib/tokenizer');
 
 describe('tokenize', function () {
 
